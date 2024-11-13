@@ -49,11 +49,17 @@ namespace MemoryGame
         private void NewGame()
         {
             
+            timer.Stop();
+            gameTimer.Stop();
+
+            
             CardGrid.Children.Clear();
             cardButtons.Clear();
             cardPairs.Clear();
+            firstCard = null;
+            secondCard = null;
             elapsedTime = 0;
-            TimerText.Text = "Eltelt idő: 0 mp";
+            TimerText.Text = "Elapsed time: 0 sec";
             gameTimer.Start();
 
             
@@ -66,7 +72,7 @@ namespace MemoryGame
                 var button = new Button { Content = "?", FontSize = 24 };
                 button.Click += Card_Click;
                 cardButtons.Add(button);
-                cardPairs[button] = image;
+                cardPairs[button] = image;  
                 CardGrid.Children.Add(button);
             }
         }
