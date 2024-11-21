@@ -59,7 +59,7 @@ namespace MemoryGame
             firstCard = null;
             secondCard = null;
             elapsedTime = 0;
-            TimerText.Text = "Elapsed time: 0 sec";
+            TimerText.Text = "Eltelt idő: 0 sec";
             gameTimer.Start();
 
             
