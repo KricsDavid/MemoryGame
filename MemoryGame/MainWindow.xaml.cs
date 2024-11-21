@@ -69,7 +69,7 @@ namespace MemoryGame
             
             foreach (var image in pairs)
             {
-                var button = new Button { Content = "?", FontSize = 24 };
+                var button = new Button { Content = "Nibba", FontSize = 24 };
                 button.Click += Card_Click;
                 cardButtons.Add(button);
                 cardPairs[button] = image;  
@@ -117,15 +117,15 @@ namespace MemoryGame
         private void FlipBackCards(object sender, EventArgs e)
         {
             timer.Stop();
-            firstCard.Content = "?";
-            secondCard.Content = "?";
+            firstCard.Content = "Nibba";
+            secondCard.Content = "Nibba";
             firstCard = null;
             secondCard = null;
         }
 
         private void CheckGameEnd()
         {
-            if (cardButtons.All(b => b.Content.ToString() != "?"))
+            if (cardButtons.All(b => b.Content.ToString() != "Nibba"))
             {
                 gameTimer.Stop();
                 MessageBox.Show($"Gratulálunk, megnyerted a játékot! Eltelt idő: {elapsedTime} mp");
